@@ -186,3 +186,66 @@ https://api.msil.go.jp/undersea-features/v2/MapServer/1/query
   "exceededTransferLimit": true
 }
 ```
+## 海底ケーブル
+```
+https://api.msil.go.jp/submarine-cable-line/v2/MapServer/2/query
+ ?where=1=1
+ &outFields=*
+ &returnGeometry=true
+ &resultRecordCount=1
+ &f=json
+ &subscription-key=0e83ad5d93214e04abf37c970c32b641
+```
+```
+{
+  "displayFieldName": "データ年度",
+  "fieldAliases": {
+    "出典": "出典",
+    "データ年度": "データ年度"
+  },
+  "geometryType": "esriGeometryPolyline",
+  "spatialReference": {
+    "wkid": 4326,
+    "latestWkid": 4326
+  },
+  "fields": [
+    {
+      "name": "出典",
+      "type": "esriFieldTypeString",
+      "alias": "出典",
+      "length": 255
+    },
+    {
+      "name": "データ年度",
+      "type": "esriFieldTypeString",
+      "alias": "データ年度",
+      "length": 255
+    }
+  ],
+  "features": [
+    {
+      "attributes": {
+        "出典": "海上保安庁(JCG)",
+        "データ年度": "2025-02"
+      },
+      "geometry": {
+        "paths": [
+          [
+            [103.4087738, -8.99999999999994],
+            [103.396356, -8.78313699999995],
+            [103.487316, -8.36012799999998],
+            [103.595392, -7.75746799999996],
+            [103.646973, -7.61378099999996],
+            [103.715903, -7.47861799999993],
+            [103.825236, -7.33468699999997],
+            [104.641702, -6.66140399999995],
+            [104.944431, -6.48217599999998],
+            [105, -6.45024239999998]
+          ]
+        ]
+      }
+    }
+  ],
+  "exceededTransferLimit": true
+}
+```
